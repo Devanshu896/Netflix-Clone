@@ -2,7 +2,6 @@
 
 LIVE LINK :  https://devanshu896.github.io/Netflix-Clone/
 
-Based on the provided `index.html` file, here are the details and technologies used for this Netflix clone project that you can include in your README file. 💻
 
 ## Project Overview
 
