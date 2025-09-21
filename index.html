@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url('http://static.photos/black/1200x630/1');
+            background-size: cover;
+            background-position: center;
+        }
+        .card:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        .nav-scrolled {
+            background-color: rgba(0, 0, 0, 0.9);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="flex justify-between items-center px-4 py-3 md:px-16">
+            <div class="flex items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="h-8 md:h-12">
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <i data-feather="globe" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
+                    <select class="bg-black bg-opacity-50 text-white border border-gray-600 rounded px-8 py-1">
+                        <option>English</option>
+                        <option>Français</option>
+                    </select>
+                </div>
+                <button class="bg-red-600 text-white px-3 py-1 rounded-md text-sm md:text-base">Sign In</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center text-center relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="z-10 px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-down">Unlimited movies, TV shows, and more.</h1>
+            <h2 class="text-xl md:text-2xl mb-6" data-aos="fade-down" data-aos-delay="100">Watch anywhere. Cancel anytime.</h2>
+            <p class="text-lg mb-8" data-aos="fade-down" data-aos-delay="200">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="flex flex-col md:flex-row gap-2" data-aos="fade-up" data-aos-delay="300">
+                <input type="email" placeholder="Email address" class="bg-black bg-opacity-70 border border-gray-600 rounded px-4 py-3 md:py-4 md:w-2/3">
+                <button class="bg-red-600 text-white px-6 py-3 md:py-4 rounded flex items-center justify-center">
+                    <span class="mr-2">Get Started</span>
+                    <i data-feather="chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="border-t-8 border-gray-800 py-16 px-4 md:px-16">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Enjoy on your TV.</h2>
+                <p class="text-xl">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            </div>
+            <div class="md:w-1/2 relative" data-aos="fade-left">
+                <img src="http://static.photos/technology/640x360/1" alt="TV" class="relative z-10">
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent z-0"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-t-8 border-gray-800 py-16 px-4 md:px-16">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 order-2 md:order-1" data-aos="fade-right">
+                <img src="http://static.photos/technology/640x360/2" alt="Mobile" class="relative z-10">
+            </div>
+            <div class="md:w-1/2 mb-8 md:mb-0 order-1 md:order-2" data-aos="fade-left">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Download your shows to watch offline.</h2>
+                <p class="text-xl">Save your favorites easily and always have something to watch.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-t-8 border-gray-800 py-16 px-4 md:px-16">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Watch everywhere.</h2>
+                <p class="text-xl">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
+            <div class="md:w-1/2" data-aos="fade-left">
+                <img src="http://static.photos/technology/640x360/3" alt="Devices" class="relative z-10">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="border-t-8 border-gray-800 py-16 px-4 md:px-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-2 mb-8">
+                <div class="bg-gray-800 p-5 cursor-pointer" data-aos="fade-up">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl">What is Netflix?</h3>
+                        <i data-feather="plus"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-5 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl">How much does Netflix cost?</h3>
+                        <i data-feather="plus"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-5 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl">Where can I watch?</h3>
+                        <i data-feather="plus"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-5 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl">How do I cancel?</h3>
+                        <i data-feather="plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="text-lg mb-8">Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="flex flex-col md:flex-row gap-2 justify-center" data-aos="fade-up">
+                    <input type="email" placeholder="Email address" class="bg-black bg-opacity-70 border border-gray-600 rounded px-4 py-3 md:py-4 md:w-96">
+                    <button class="bg-red-600 text-white px-6 py-3 md:py-4 rounded flex items-center justify-center">
+                        <span class="mr-2">Get Started</span>
+                        <i data-feather="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t-8 border-gray-800 py-12 px-4 md:px-16 text-gray-400">
+        <div class="max-w-6xl mx-auto">
+            <p class="mb-8">Questions? Call 1-844-505-2993</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <a href="#" class="hover:underline">FAQ</a>
+                <a href="#" class="hover:underline">Help Center</a>
+                <a href="#" class="hover:underline">Account</a>
+                <a href="#" class="hover:underline">Media Center</a>
+                <a href="#" class="hover:underline">Investor Relations</a>
+                <a href="#" class="hover:underline">Jobs</a>
+                <a href="#" class="hover:underline">Ways to Watch</a>
+                <a href="#" class="hover:underline">Terms of Use</a>
+                <a href="#" class="hover:underline">Privacy</a>
+                <a href="#" class="hover:underline">Cookie Preferences</a>
+                <a href="#" class="hover:underline">Corporate Information</a>
+                <a href="#" class="hover:underline">Contact Us</a>
+                <a href="#" class="hover:underline">Speed Test</a>
+                <a href="#" class="hover:underline">Legal Notices</a>
+                <a href="#" class="hover:underline">Only on Netflix</a>
+            </div>
+            <div class="relative mb-4">
+                <i data-feather="globe" class="absolute left-3 top-1/2 transform -translate-y-1/2"></i>
+                <select class="bg-black bg-opacity-50 text-white border border-gray-600 rounded px-8 py-1">
+                    <option>English</option>
+                    <option>Français</option>
+                </select>
+            </div>
+            <p>Netflix Clone</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // FAQ accordion functionality
+        const faqItems = document.querySelectorAll('footer section div.space-y-2 > div');
+        faqItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                if (icon.getAttribute('data-feather') === 'plus') {
+                    icon.setAttribute('data-feather', 'x');
+                } else {
+                    icon.setAttribute('data-feather', 'plus');
+                }
+                feather.replace();
+            });
+        });
+    </script>
+</body>
+</html>
